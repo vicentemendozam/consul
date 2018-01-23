@@ -20,6 +20,15 @@ he:
         feature_2_html: "דיונים ניתן לדרג באמצעות הקשה על לחצן <strong>אני מסכים/ה </strong> או <strong>לא מסכים/ה</strong> שנמצאים לצד כל דיון"
         image_alt: "לחצנים לדרג את הדיונים"
         figcaption: '"אני מסכים/ה" ו "לא מסכים/ה" לחצנים המדרגים את הדיונים'
+      proposals:
+        title: "Proposals"
+        description: "Propose what you want the City Council to do and support proposals from other people."
+        feature_1: "To create a proposal you have to %{link}, in addition to support you must verify your account."
+        feature_1_link: "sign up on %{org_name}"
+        feature_2_html: "Proposals that get <strong>support from 1% of people</strong> will be voted on."
+        feature_3_html: "If there are more people in favor than against, <strong>the City Council will publish their plan to accomplish</strong> the proposal and you can track its progress."
+        image_alt: "Button to support a proposal"
+        figcaption_html: 'Button to "Support" a proposal.<br>When it reaches the number of supports will go to vote.'
       budgets:
         title: "תקציב השתתפותי"
         description: "בששת החודשים הראשונים של כל שנה ניתן להחליט על מה להוציא חלק מהתקציב"
@@ -41,7 +50,13 @@ he:
         title: "נתקלת בבעיות טכניות?"
         description: "נא להיכנס ולקרוא תשובות לשאלות נפוצות שאולי יפתרו את הבעיות בהן נתקלת"
         button: "הצגת שאלות נפוצות"
+        page:
+          title: "Frequently Asked Questions"
+          description: "Use this page to resolve the common FAQs to the users of site."
+          faq_1_title: "Question 1"
+          faq_1_description: "This is an example for the description of question one."
       other:
+        title: "Other information of interest"
         how_to_use: "שימוש %{org_name} בעירך"
       how_to_use:
         text: |-
@@ -59,5 +74,6 @@ he:
       email: דואר אלקטרוני
       info: 'כדי לאמת את חשבונך נא להכניס את נתוני הגישה שלך:'
       info_code: 'עכשיו יש להכניס את הקוד שקיבלת בדואר אלקטרוני:'
+      password: Password
       submit: אמת את החשבון שלי
       title: אימות החשבון
