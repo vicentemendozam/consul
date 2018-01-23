@@ -138,15 +138,20 @@ val:
         valuator_filter_all: Tots els avaluadors
         tags_filter_all: Totes les etiquetes
         filters:
-          valuation_open: Obertes
-          without_admin: Sense administrador
-          managed: Gestor
-          valuating: En avaluació
-          valuation_finished: Avaluació finalitzada
-          valuation_finished_feasible: Viables
-          selected: Seleccionades
-          winners: Guanyadores
           all: Totes
+          without_admin: Sense administrador
+          without_valuator: Without assigned valuator
+          under_valuation: Under valuation
+          valuation_finished: Avaluació finalitzada
+          feasible: Feasible
+          selected: Seleccionades
+          undecided: Undecided
+          unfeasible: Unfeasible
+          max_per_heading: Max. supports per heading
+          winners: Guanyadores
+          button: Filter
+          one_filter_html: 'Current applied filter: <b><em>%{filter}</em></b>'
+          two_filters_html: 'Current applied filters: <b><em>%{filter}, %{second_filter}</em></b>'
         download_current_selection: "Baixar la selecció actual"
         no_budget_investments: "No hi ha projectes d'inversió."
         title: Propostes d'inversió
@@ -167,7 +172,7 @@ val:
         table_geozone: "Ámbit d'actuació"
         table_feasibility: "Viabilitat"
         table_valuation_finished: "Av. Fin."
-        table_selection: "Selecció"
+        table_selection: "Selected"
         table_incompatible: "Incompatible"
       show:
         assigned_admin: Administrador asignat
