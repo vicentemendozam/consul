@@ -138,15 +138,20 @@ es:
         valuator_filter_all: Todos los evaluadores
         tags_filter_all: Todas las etiquetas
         filters:
-          valuation_open: Abiertas
-          without_admin: Sin administrador
-          managed: Gestionando
-          valuating: En evaluación
-          valuation_finished: Evaluación finalizada
-          valuation_finished_feasible: Viables
-          selected: Seleccionadas
-          winners: Ganadoras
           all: Todas
+          without_admin: Sin administrador
+          without_valuator: Without assigned valuator
+          under_valuation: Under valuation
+          valuation_finished: Evaluación finalizada
+          feasible: Feasible
+          selected: Seleccionadas
+          undecided: Undecided
+          unfeasible: Unfeasible
+          max_per_heading: Max. supports per heading
+          winners: Ganadoras
+          button: Filter
+          one_filter_html: 'Current applied filter: <b><em>%{filter}</em></b>'
+          two_filters_html: 'Current applied filters: <b><em>%{filter}, %{second_filter}</em></b>'
         download_current_selection: "Descargar selección actual"
         no_budget_investments: "No hay proyectos de inversión."
         title: Propuestas de inversión
@@ -167,7 +172,7 @@ es:
         table_geozone: "Ámbito de actuación"
         table_feasibility: "Viabilidad"
         table_valuation_finished: "Ev. Fin."
-        table_selection: "Selección"
+        table_selection: "Selected"
         table_incompatible: "Incompatible"
       show:
         assigned_admin: Administrador asignado
