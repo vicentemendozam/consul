@@ -85,6 +85,13 @@ val:
       edit:
         title: Edita campanya de pressupostos participatius
         delete: Eliminar presupost
+        phase: Fase
+        dates: Dates
+        enabled: Actiu
+        actions: Accions
+        edit_phase: Edita fase
+        active: Actius
+        blank_dates: Les dates estan en blanc
       destroy:
         success_notice: Pressupost eliminat correctament
         unable_notice: No pots eliminar un Pressupost amb propostes
@@ -113,6 +120,17 @@ val:
       winners:
         calculate: Calcular propostes guanyadores
         calculated: Calculant guanyadores, pot tardar algún minut.
+    budget_phases:
+      edit:
+        start_date: Data d'inici del procés
+        end_date: Data de fi del procés
+        summary: Resum
+        summary_help_text: Este text apareixerà en la capçalera quant la fase estiga activa
+        description: Descripció
+        description_help_text: Este text informarà a l'usuari sobre la fase. Per a mostrar-lo inclús quant la fase no estiga activa, selecciona la casella següent
+        enabled: Fase habilitada
+        enabled_help_text: Aquesta fase serà pública en el calendari de fases del pressupost, així com activa per a qualsevol altre propòsit
+        save_changes: Guardar canvis
     budget_investments:
       index:
         heading_filter_all: Totes les partides
