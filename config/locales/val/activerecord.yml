@@ -5,8 +5,8 @@ val:
         one: "activitat"
         other: "activitats"
       budget:
-        one: "Pressupost participatiu"
-        other: "Pressupostos participatius"
+        one: "Pressupost"
+        other: "Pressupostos"
       budget/investment:
         one: "Proposta d'inversió"
         other: "Propostes d'inversió"
