@@ -125,9 +125,9 @@ val:
         start_date: Data d'inici del procés
         end_date: Data de fi del procés
         summary: Resum
-        summary_help_text: Este text apareixerà en la capçalera quant la fase estiga activa
+        summary_help_text: This text will inform the user about the phase. To show it even if the phase is not active, select the checkbox below
         description: Descripció
-        description_help_text: Este text informarà a l'usuari sobre la fase. Per a mostrar-lo inclús quant la fase no estiga activa, selecciona la casella següent
+        description_help_text: This text will appear in the header when the phase is active
         enabled: Fase habilitada
         enabled_help_text: Aquesta fase serà pública en el calendari de fases del pressupost, així com activa per a qualsevol altre propòsit
         save_changes: Guardar canvis
