@@ -137,6 +137,7 @@ val:
         administrator_filter_all: Tots els administradors
         valuator_filter_all: Tots els avaluadors
         tags_filter_all: Totes les etiquetes
+        advanced_filters: Advanced filters
         filters:
           all: Totes
           without_admin: Sense administrador
