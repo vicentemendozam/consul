@@ -61,6 +61,9 @@ FactoryBot.define do
     end
   end
 
+  factory :user_group, class: User::Group do
+  end
+
   factory :identity do
     user nil
     provider "Twitter"

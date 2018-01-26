@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180119073228) do
+ActiveRecord::Schema.define(version: 20180126152841) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -1039,6 +1039,11 @@ ActiveRecord::Schema.define(version: 20180119073228) do
 
   add_index "topics", ["community_id"], name: "index_topics_on_community_id", using: :btree
   add_index "topics", ["hidden_at"], name: "index_topics_on_hidden_at", using: :btree
+
+  create_table "user_groups", force: :cascade do |t|
+    t.string "name"
+    t.string "kind"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                                     default: ""

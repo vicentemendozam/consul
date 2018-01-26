@@ -95,6 +95,10 @@ namespace :admin do
 
   resources :users, only: [:index, :show]
 
+  namespace :user do
+    resources :groups
+  end
+
   scope module: :poll do
     resources :polls do
       get :booth_assignments, on: :collection
