@@ -32,7 +32,9 @@ class Budget
 
     has_many :valuator_assignments, dependent: :destroy
     has_many :valuators, through: :valuator_assignments
-    has_many :comments, as: :commentable
+    has_many :comments, as: :commentable, class_name: 'Comment'
+    has_many :evaluations, as: :valuable, class_name: 'Comment'
+
     has_many :milestones
 
     validates :title, presence: true

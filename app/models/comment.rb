@@ -17,11 +17,14 @@ class Comment < ActiveRecord::Base
   validates :body, presence: true
   validates :user, presence: true
 
-  validates :commentable_type, inclusion: { in: COMMENTABLE_TYPES }
+  validates :commentable_type, inclusion: { in: COMMENTABLE_TYPES }, allow_blank: true
+  validates :valuable_type, inclusion: { in: %w(Budget::Investment) }, allow_blank: true
+  validate :comment_or_evaluation
 
   validate :validate_body_length
 
   belongs_to :commentable, -> { with_hidden }, polymorphic: true, counter_cache: true
+  belongs_to :valuable, -> { with_hidden }, polymorphic: true, counter_cache: true
   belongs_to :user, -> { with_hidden }
 
   before_save :calculate_confidence_score
@@ -50,13 +53,22 @@ class Comment < ActiveRecord::Base
   scope :sort_by_oldest, -> { order(created_at: :asc) }
   scope :sort_descendants_by_oldest, -> { order(created_at: :asc) }
 
+  scope :valuations, -> { where.not(valuable_type: nil) }
+
   after_create :call_after_commented
 
-  def self.build(commentable, user, body, p_id = nil)
-    new commentable: commentable,
+  def self.build_commentable(commentable, user, body, p_id = nil)
+    new(commentable: commentable,
         user_id:     user.id,
         body:        body,
-        parent_id:   p_id
+        parent_id:   p_id)
+  end
+
+  def self.build_valuable(valuable, user, body, p_id = nil)
+    new(valuable: valuable,
+        user_id:     user.id,
+        body:        body,
+        parent_id:   p_id)
   end
 
   def self.find_commentable(c_type, c_id)
@@ -121,6 +133,12 @@ class Comment < ActiveRecord::Base
   end
 
   private
+
+    def comment_or_evaluation
+      if commentable_type.blank? && valuable_type.blank?
+        errors.add(:commentable_type, "Not a comment or a evaluation?")
+      end
+    end
 
     def validate_body_length
       validator = ActiveModel::Validations::LengthValidator.new(

@@ -45,11 +45,12 @@ class CommentsController < ApplicationController
 
     def comment_params
       params.require(:comment).permit(:commentable_type, :commentable_id, :parent_id,
-                                      :body, :as_moderator, :as_administrator)
+                                      :body, :as_moderator, :as_administrator, :valuation)
     end
 
     def build_comment
-      @comment = Comment.build(@commentable, current_user, comment_params[:body],
+      comment_type = comment_params[:valuation] ? 'valuable' : 'commentable'
+      @comment = Comment.send("build_#{comment_type}")(@commentable, current_user, comment_params[:body],
                                comment_params[:parent_id].presence)
       check_for_special_comments
     end

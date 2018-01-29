@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180119073228) do
+ActiveRecord::Schema.define(version: 20180127001258) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -248,6 +248,8 @@ ActiveRecord::Schema.define(version: 20180119073228) do
     t.datetime "confirmed_hide_at"
     t.string   "ancestry"
     t.integer  "confidence_score",   default: 0, null: false
+    t.integer  "valuable_id"
+    t.string   "valuable_type"
   end
 
   add_index "comments", ["ancestry"], name: "index_comments_on_ancestry", using: :btree
@@ -257,6 +259,7 @@ ActiveRecord::Schema.define(version: 20180119073228) do
   add_index "comments", ["commentable_id", "commentable_type"], name: "index_comments_on_commentable_id_and_commentable_type", using: :btree
   add_index "comments", ["hidden_at"], name: "index_comments_on_hidden_at", using: :btree
   add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
+  add_index "comments", ["valuable_id", "valuable_type"], name: "index_comments_on_valuable_id_and_valuable_type", using: :btree
 
   create_table "communities", force: :cascade do |t|
     t.datetime "created_at", null: false
