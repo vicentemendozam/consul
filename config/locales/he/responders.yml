@@ -9,6 +9,7 @@ he:
         poll_booth: "Booth created successfully."
         poll_question_answer: "Answer created successfully"
         poll_question_answer_video: "Video created successfully"
+        poll_question_answer_image: "Image uploaded successfully"
         proposal: "הצעתך נוספה בהצלחה"
         proposal_notification: "הודעתך נשלחה כראוי"
         spending_proposal: "הצעתך לתקצוב נוצרה בהצלחה. ניתן לגשת אליה ב %{activity}"
