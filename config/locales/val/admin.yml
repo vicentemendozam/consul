@@ -68,7 +68,7 @@ val:
         new_link: Crear nou pressupost
         filter: Filtre
         filters:
-          current: Oberts
+          open: Open
           finished: Finalitzats
         budget_investments: Vore propostes d'inversió
         table_name: Nom
