@@ -138,6 +138,12 @@ es:
         valuator_filter_all: Todos los evaluadores
         tags_filter_all: Todas las etiquetas
         advanced_filters: Advanced filters
+        placeholder: Search projects
+        sort_by:
+          placeholder: Sort by
+          id: ID
+          title: Title
+          supports: Supports
         filters:
           all: Todas
           without_admin: Sin administrador
@@ -150,9 +156,11 @@ es:
           unfeasible: Unfeasible
           max_per_heading: Max. supports per heading
           winners: Ganadoras
-          button: Filter
           one_filter_html: 'Current applied filter: <b><em>%{filter}</em></b>'
           two_filters_html: 'Current applied filters: <b><em>%{filter}, %{second_filter}</em></b>'
+        buttons:
+          search: Search
+          filter: Filter
         download_current_selection: "Descargar selección actual"
         no_budget_investments: "No hay proyectos de inversión."
         title: Propuestas de inversión
