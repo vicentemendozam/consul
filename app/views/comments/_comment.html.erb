@@ -67,9 +67,11 @@
         </div>
 
         <div id="<%= dom_id(comment) %>_reply" class="reply">
-          <div id="<%= dom_id(comment) %>_votes" class="comment-votes float-right">
-            <%= render 'comments/votes', comment: comment %>
-          </div>
+          <% if local_assigns.fetch(:allow_votes, true) %>
+            <div id="<%= dom_id(comment) %>_votes" class="comment-votes float-right">
+              <%= render 'comments/votes', comment: comment %>
+            </div>
+          <% end %>
 
           <% if comment.children.size > 0 %>
             <%= link_to "", class: "js-toggle-children relative", data: {'id': "#{dom_id(comment)}"} do %>
